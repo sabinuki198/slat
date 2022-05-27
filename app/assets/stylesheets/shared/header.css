@@ -1,0 +1,53 @@
+.header-back{
+  height: 12vh;
+  width: 100vw;
+  background-color:darkslateblue;
+  padding: 10px 20px;
+  display: flex;
+
+}
+
+.header-left{
+  height: 100%;
+  width: 50%;
+  display: flex;
+  align-items: center; /*ここらへんは改修できるかも*/
+}
+
+.logo{
+  font-size: 40px;
+  color: aliceblue;
+}
+
+.header-right{
+  height: 100%;
+  width: calc(100vw - 50%);
+  display: flex;
+  justify-content: right;
+  align-items:flex-end; 
+}
+
+.user-name{
+  font-size: 25px;
+  margin-right: 30px;
+}
+
+.button-1{
+  height: 30px;
+  width: 100px;
+  background-color: aliceblue;
+  font-size: 20px;
+  margin-right: 10px;
+  border-radius: 20px;
+  text-align: center
+}
+
+.button-2{
+  height: 30px;
+  width: 100px;
+  background-color: aliceblue;
+  font-size: 20px;
+  margin-right: 10px;
+  border-radius: 20px;
+  text-align: center
+}
