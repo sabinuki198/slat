@@ -1,0 +1,48 @@
+.contents-back{
+  height: calc(100vh - 12vh); /*ヘッダー抜いた高さ*/
+  width: calc(100vw - 20vw);
+}
+
+.main-contents{
+  height: 100%;
+  background-color: white;
+  padding: 10px 10px 0 10px;
+  overflow: auto;
+}
+
+.main-title{
+  font-size: 40px;
+}
+
+.main-image{
+
+}
+
+.main-text{
+  font-size: 20px;
+}
+.contents-bottom{
+  height: 45px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.edit-button{
+  height: 30px;
+  width: 100px;
+  background-color: aliceblue;
+  font-size: 20px;
+  margin-right: 10px;
+  border-radius: 20px;
+  text-align: center
+}
+
+.destroy-button{
+  height: 30px;
+  width: 100px;
+  background-color: aliceblue;
+  font-size: 20px;
+  margin-right: 10px;
+  border-radius: 20px;
+  text-align: center
+}

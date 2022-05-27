@@ -1,0 +1,10 @@
+.side-back{
+  height: calc(100vh - 12vh);/*ヘッダー抜いた高さ*/
+  width: 20vw;
+  background-color: gray;
+  padding: 10px;
+}
+
+.search-form{ /*検索フォーム部分最終調整時に形を決める*/
+
+}
