@@ -4,15 +4,27 @@
   </div>
 
   <div class="header-right">
-    <div class="user-name">
-    ようこそnicknameさん
-    </div>
-    <div class="button-1">
-      ログイン
-    </div>
-    <div class="button-2">
-    新規登録
-    </div>
+    <% if user_signed_in? %>
+      <div class="user-name">
+      ようこそ<%=current_user.nickname%>さん
+      </div>
+    <% else %>
+      <div class="user-name">
+      ようこそ
+      </div>
+    <% end %>
+
+    <% if user_signed_in? %>
+      <div class="action-button">
+        <%= link_to "記事作成", "#", class: "content-create"%>
+        <%= link_to "ログアウト", destroy_user_session_path, method: :delete, class: "logout"%>
+      </div>
+    <% else %>
+      <div class="action-button">
+        <%= link_to "ログイン", new_user_session_path, class: "login"%>
+        <%= link_to "新規登録", new_user_registration_path, class: "sign-up"%>
+      </div>
+    <% end %>
   </div>
 
 </div>
