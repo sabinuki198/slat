@@ -16,7 +16,7 @@
 
     <% if user_signed_in? %>
       <div class="action-button">
-        <%= link_to "記事作成", "#", class: "content-create"%>
+        <%= link_to "記事作成", new_content_path, class: "content-create"%>
         <%= link_to "ログアウト", destroy_user_session_path, method: :delete, class: "logout"%>
       </div>
     <% else %>

@@ -4,13 +4,21 @@ class ContentsController < ApplicationController
   end
   
   def new
+    @content = Content.new
   end
 
   def create
+    @content = Content.new(content_params)
+    if @content.save
+      redirect_to root_path
+    else
+      render :new
+    end
   end
 
   private
 
-  def content_parameter
-    params.require(:contents)
+  def content_params
+    params.require(:content).permit(:title,:text,:category_id).merge(user_id: current_user.id)
+  end
 end
