@@ -32,22 +32,24 @@
   margin-right: 30px;
 }
 
-.button-1{
-  height: 30px;
-  width: 100px;
-  background-color: aliceblue;
-  font-size: 20px;
-  margin-right: 10px;
-  border-radius: 20px;
-  text-align: center
+.action-button{
+  display: flex;
+  height: 60px;
+  width: 220px;
+  justify-content: right;
+  align-items:flex-end; 
 }
 
-.button-2{
+.login, .sign-up, .content-create, .logout{
   height: 30px;
   width: 100px;
   background-color: aliceblue;
   font-size: 20px;
   margin-right: 10px;
   border-radius: 20px;
-  text-align: center
+  text-align: center;
+  text-decoration: none;
+  color: black;
 }
+
+
