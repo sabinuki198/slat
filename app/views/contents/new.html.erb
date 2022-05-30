@@ -1,0 +1,17 @@
+<%= render "shared/header"%>
+<%= form_with model: @content, url:contents_path, local: true do |f| %>
+  <%= render 'shared/error_messages', model: f.object %>
+  <div class="content-page">
+      記事を作成する
+      <%= f.text_field :title, class:"title", placeholder:"タイトル" %>
+      <%= f.text_area :text, class:"text", placeholder:"テキスト" %>
+      <div class="click-upload">
+        <p>
+          クリックしてファイルをアップロード
+        </p>
+        <%= f.file_field :image, id:"item-image" %>
+      </div>
+      <%= f.collection_select(:category_id, Category.all, :id, :name, {}, {class:"category-select"}) %>
+      <%= f.submit "作成する" ,class:"btn" %>
+  </div>
+<% end %>

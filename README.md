@@ -14,11 +14,12 @@
 
 ## contents テーブル
 
-| column         | Type          | Options               |
-| -------------- | ------------- | --------------------- |
-| title          | string        | null: false           |
-| text           | text          | null: false           |
-| category_id    | integer       | null: false           |
+| column         | Type          | Options                        |
+| -------------- | ------------- | ------------------------------ |
+| title          | string        | null: false                    |
+| text           | text          | null: false                    |
+| category_id    | integer       | null: false                    |
+| user           | references    | null: false, foreign_key: true |
 
 ### Association
 
