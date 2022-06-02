@@ -5,10 +5,26 @@
       <%= f.submit "検索" %>
     <% end %>
   </div>
-  <div class=category-list>
-    <ul type="disc">
-        <li>サンプルテキスト</li>
-        <li>サンプルテキスト</li>
-    </ul>
-  </div>
+
+  <% if user_signed_in? %>
+    <%@user_content.each do |content|%>
+      <% if content.present? %>
+        <div class=category-list>
+          <ul type="disc"><%= content.first.category.name %>
+            <% content.each do |t| %>
+              <li>|ー<%= t.title%></li>
+            <% end %>
+          </ul>
+        </div>
+      <% end %>
+    <% end %>
+
+  <% else %>
+    <div class=category-list>
+      <ul type="disc">
+          <li>|ーサンプルテキスト</li>
+          <li>|ーサンプルテキスト</li>
+      </ul>
+    </div>
+  <% end %>
 </div>
