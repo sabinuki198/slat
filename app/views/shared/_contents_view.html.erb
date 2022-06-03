@@ -17,7 +17,7 @@
         </div>
         <div class="contents-bottom">
           <%= link_to "編集", edit_content_path(@content.id), class: "edit-button"%>
-          <%= link_to "削除", "#", class: "destroy-button"%>
+          <%= link_to "削除", content_path(@content.id), method: :delete, class: "destroy-button"%>
         </div>
       </div>
     <% else %>

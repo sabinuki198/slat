@@ -18,8 +18,8 @@ class ContentsController < ApplicationController
   end
 
   def show
-    content_extract
     @content = Content.find(params[:id])
+    content_extract
   end
 
   def edit
@@ -38,6 +38,16 @@ class ContentsController < ApplicationController
     end
   end
   
+
+  def destroy
+    @content = Content.find(params[:id])
+    if @content.destroy
+      redirect_to root_path
+    else
+      render :show
+    end
+  end
+
   private
 
     def content_params
@@ -54,4 +64,4 @@ class ContentsController < ApplicationController
         end
       end
     end
-end
+  end
