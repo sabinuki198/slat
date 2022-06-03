@@ -16,7 +16,7 @@
           <%= @content.text %>
         </div>
         <div class="contents-bottom">
-          <%= link_to "編集", "#", class: "edit-button"%>
+          <%= link_to "編集", edit_content_path(@content.id), class: "edit-button"%>
           <%= link_to "削除", "#", class: "destroy-button"%>
         </div>
       </div>
