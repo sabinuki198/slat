@@ -8,3 +8,23 @@
 .search-form{ /*検索フォーム部分最終調整時に形を決める*/
 
 }
+
+.category-list{
+  margin: 5px 0 0 5px;
+}
+
+.category-title{
+  font-size: 20px;
+  color: darkslategray;
+}
+.title-list{
+  font-size: 20px;
+  margin: 0 0 0 10px;
+  text-decoration: none;
+  color: darkslategray;
+}
+
+.content-title{
+  text-decoration: none;
+  color: darkslategray;
+}

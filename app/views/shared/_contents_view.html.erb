@@ -1,23 +1,50 @@
 <div class="contents-back">
-  <div class="main-contents">
-    <div class="main-title">
-    ようこそSlatへ
-    </div>
-    <div class="main-image">
-    </div>
-    <div class="main-text">
-    ここは自分の知識を整理する空間です。<br>
-    初めての方は新規登録ボタン、既にアカウント登録されている方はログインボタンを押してください。<br>
-    </div>
-    
-    <div class="contents-bottom">
-      <div class="edit-button">
-        編集
+
+  <% if user_signed_in?%>
+
+    <% if @content.present?%>
+      <div class="main-contents">
+        <div class="main-title">
+          <%= @content.title %>
+        </div>
+        <% if @content.image.attached?%>
+        <div class="main-image">
+          <%= image_tag @content.image.variant(resize: '400x400'), class: 'content-image' %>
+        </div>
+        <% end %>
+        <div class="main-text">
+          <%= @content.text %>
+        </div>
+        <div class="contents-bottom">
+          <%= link_to "編集", "#", class: "edit-button"%>
+          <%= link_to "削除", "#", class: "destroy-button"%>
+        </div>
       </div>
-      <div class="destroy-button">
-      削除
+    <% else %>
+       <div class="main-contents">
+          <div class="main-title">
+            ようこそSlatへ
+          </div>
+          <div class="main-image">
+          </div>
+          <div class="main-text">
+            記事を作成する場合は右上の記事作成ボタンをクリックしてください。<br>
+            記事を閲覧する場合は左のサイドバーから記事をクリックしてください。<br>
+          </div>
+        </div>
+    <% end %>
+  <% else %>
+    <div class="main-contents">
+      <div class="main-title">
+      ようこそSlatへ
+      </div>
+      <div class="main-image">
+      </div>
+      <div class="main-text">
+      ここは自分の知識を整理する空間です。<br>
+      初めての方は新規登録ボタン、既にアカウント登録されている方はログインボタンを押してください。<br>
       </div>
     </div>
-  </div>
+  <% end %>
 
 </div>

@@ -17,6 +17,11 @@ class ContentsController < ApplicationController
     end
   end
 
+  def show
+    content_extract
+    @content = Content.find(params[:id])
+  end
+  
   private
 
     def content_params

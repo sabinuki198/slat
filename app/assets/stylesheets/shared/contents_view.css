@@ -27,22 +27,15 @@
   justify-content: space-around;
   align-items: center;
 }
-.edit-button{
-  height: 30px;
-  width: 100px;
-  background-color: aliceblue;
-  font-size: 20px;
-  margin-right: 10px;
-  border-radius: 20px;
-  text-align: center
-}
 
-.destroy-button{
+.destroy-button, .edit-button{
   height: 30px;
   width: 100px;
   background-color: aliceblue;
   font-size: 20px;
   margin-right: 10px;
   border-radius: 20px;
-  text-align: center
+  text-align: center;
+  text-decoration: none;
+  color: black;
 }

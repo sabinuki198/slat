@@ -10,9 +10,9 @@
     <%@user_content.each do |content|%>
       <% if content.present? %>
         <div class=category-list>
-          <ul type="disc"><%= content.first.category.name %>
+          <ul class="category-title" type="disc"><%= content.first.category.name %>
             <% content.each do |t| %>
-              <li>|ー<%= t.title%></li>
+              <li class="title-list">|ー <%= link_to t.title, content_path(t.id), {class: "content-title"} %></li>
             <% end %>
           </ul>
         </div>
