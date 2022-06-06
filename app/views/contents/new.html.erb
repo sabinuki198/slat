@@ -5,10 +5,12 @@
       記事を作成する
       <%= f.text_field :title, class:"title", placeholder:"タイトル" %>
       <%= f.text_area :text, class:"text", placeholder:"テキスト" %>
-      <div id="previews"></div>
-      <div class="click-upload">
-        <p>クリックしてファイルをアップロード</p>
-        <%= f.file_field :image %>
+      <div>
+        <div id="previews"></div>
+        <div class="click-upload">
+          <p>クリックしてファイルをアップロード</p>
+          <%= f.file_field :image, name: 'content[images][]', data: {index: 0} %>
+        </div>
       </div>
       <%= f.collection_select(:category_id, Category.all, :id, :name, {}, {class:"category-select"}) %>
       <%= f.submit "作成する" ,class:"btn" %>

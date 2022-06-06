@@ -18,6 +18,20 @@
 
 }
 
+.other-images {
+  display: flex;
+}
+
+.other-image {
+  margin-right: 10px;
+}
+
+.image-delete-button {
+  text-align: center;
+  border: solid 1px;
+  cursor: pointer;
+}
+
 .main-text{
   font-size: 20px;
 }

@@ -7,10 +7,17 @@
         <div class="main-title">
           <%= @content.title %>
         </div>
-        <% if @content.image.attached?%>
-        <div class="main-image">
-          <%= image_tag @content.image.variant(resize: '400x400'), class: 'content-image' %>
-        </div>
+        <% if @content.images.attached?%>
+          <div class="main-image">
+            <%= image_tag @content.image[0].variant(resize: '400x400'), class: 'content-image' %><br>
+              <div class="other-images">
+                <% @content.images[1..-1].each do |image| %>
+                  <div class="other-image">
+                    <%= image_tag image %>
+                  </div>
+                <%end%>
+              </div>
+          </div>
         <% end %>
         <div class="main-text">
           <%= @content.text %>
