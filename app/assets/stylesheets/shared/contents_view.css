@@ -15,7 +15,21 @@
 }
 
 .main-image{
+  display: flex;
+}
 
+.content-images {
+  margin-right: 10px;
+}
+
+.content-image {
+  
+}
+
+.image-delete-button {
+  text-align: center;
+  border: solid 1px;
+  cursor: pointer;
 }
 
 .main-text{
