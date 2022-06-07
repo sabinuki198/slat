@@ -17,7 +17,7 @@
           </div>
         <% end %>
         <div class="main-text">
-          <%= @content.text %>
+          <%= text_url_to_link(safe_join((h(@content.text)).split("\n"),tag(:br))).html_safe %>
         </div>
         <div class="contents-bottom">
           <%= link_to "編集", edit_content_path(@content.id), class: "edit-button"%>
