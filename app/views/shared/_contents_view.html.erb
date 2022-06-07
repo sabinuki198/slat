@@ -9,14 +9,11 @@
         </div>
         <% if @content.images.attached?%>
           <div class="main-image">
-            <%= image_tag @content.image[0].variant(resize: '400x400'), class: 'content-image' %><br>
-              <div class="other-images">
-                <% @content.images[1..-1].each do |image| %>
-                  <div class="other-image">
-                    <%= image_tag image %>
+                <% @content.images[0..-1].each do |image| %>
+                  <div class="content-images">
+                    <%= image_tag image.variant(resize: '300x300'), class: 'content-image' %>
                   </div>
                 <%end%>
-              </div>
           </div>
         <% end %>
         <div class="main-text">

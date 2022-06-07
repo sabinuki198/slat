@@ -15,15 +15,15 @@
 }
 
 .main-image{
-
-}
-
-.other-images {
   display: flex;
 }
 
-.other-image {
+.content-images {
   margin-right: 10px;
+}
+
+.content-image {
+  
 }
 
 .image-delete-button {
