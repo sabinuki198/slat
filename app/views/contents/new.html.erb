@@ -2,15 +2,15 @@
 <div class='account-page2' id='account-page'>
   <div class='account-page__inner2 clearfix'>
     <div class='account-page__inner--left2 account-page__header2'>
-      <h2>Create content</h2>
-      <h5>記事を作成する</h5>
+      <h2 class="content-ac-eng">Create Content</h2>
+      <h5 class="content-ac-jpn">記事を作成する</h5>
     </div>
     <div class='account-page__inner--right2 user-form'>
-      <%= form_with model: @content, id: 'new_post', url:contents_path, local: true do |f| %>
+      <%= form_with model: @content, id: 'new_post', local: true do |f| %>
         <%= render 'shared/error_messages', model: f.object %>
         <div class='field2'>
           <div class='field-label2'>
-            <%= f.label :title%>
+            <%= f.label :title, {class:"title-label"} %>
           </div>
           <div class='field-input2'>
             <%= f.text_field :title, class:"title", placeholder:"タイトル", autofocus: true%>
@@ -18,29 +18,30 @@
         </div>
         <div class='field2'>
           <div class='field-label2'>
-            <%= f.label :text%>
+            <%= f.label :text, {class:"text-label"} %>
           </div>
           <div class='field-input2'>
             <%= f.text_area :text, class:"text", placeholder:"テキスト" %>
           </div>
         </div>
+       <div>
+          <div id="previews" class="images-box"></div>
+          <div class="click-upload">
+            <p class="click-message">クリックしてファイルをアップロード(3枚まで)</p>
+            <%= f.file_field :image, name: 'content[images][]', data: {index: 0} %>
+          </div>
+        </div>
         <div class='field2'>
           <div class='field-label2'>
-            <%= f.label :category_id%>
+            <%= f.label :category_id, {class:"category-label"} %>
           </div>
           <div class='field-input2'>
             <%= f.collection_select(:category_id, Category.all, :id, :name, {}, {class:"category-select"}) %>
           </div>
         </div>
-        <div>
-          <div id="previews" class="images-box"></div>
-          <div class="click-upload">
-            <p>クリックしてファイルをアップロード(任意：3枚まで)</p>
-            <%= f.file_field :image, name: 'content[images][]', data: {index: 0} %>
-          </div>
-        </div>
+ 
         <div class='actions2'>
-          <%= f.submit "Create Content", class: 'btn'%>
+          <%= f.submit "Create Content", class: 'btn2'%>
         </div>
       </div>
     <% end %>

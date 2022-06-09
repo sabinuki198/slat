@@ -1,21 +1,90 @@
-.content-page {
-  height:800px;
-  background-color: lightgray;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
+.account-page2 .account-page__inner2 {
+  width: 980px;
+  margin: 60px auto;
+  padding: 60px;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+.account-page2 .account-page__inner2 .account-page2 {
+  float: left;
+  width: 50%;
+}
+.account-page2 .account-page__inner2:after {
+  clear: both;
+  content: "";
+  display: block;
+}
+.account-page2 .account-page__header2 .content-ac-eng {
+  margin-bottom: 10px;
+  letter-spacing: 3px;
+  font-size: 40px;
+  font-weight: 200;
+}
+.account-page2 .account-page__header2 .content-ac-eng:after {
+  content: "";
+  display: block;
+  width: 60px;
+  margin-top: 5px;
+  border-bottom: 1px solid #38aef0;
+}
+.account-page2 .account-page__header2 {
+  margin-bottom: 20px;
+  font-size: 14px;
+  font-weight: 200;
+}
+
+.account-page2 .field2 {
+  margin-bottom: 10px;
+}
+.account-page2 .field .field-label2 {
+  padding: 10px 0;
+  letter-spacing: 1px;
+  font-size: 14px;
+  font-weight: 200;
+}
+.account-page2 .field2 .field-label2 i {
+  font-size: 11px;
+}
+.account-page2 .field2 .field-input2 {
+  width: 100%;
+  padding: 10px;
+  letter-spacing: 1px;
+}
+.account-page2 .btn2 {
+  display: inline-block;
+  height: 50px;
+  padding: 0 30px;
+  line-height: 50px;
+  letter-spacing: 1px;
+  text-align: center;
+  border: none;
+  border-radius: 2px;
+}
+.account-page2 input[type=submit] {
+  float: left;
+  margin-top: 20px;
+  color: #fff;
+  background-color: #38aef0;
+}
+.account-page2 .field-label2 .field_with_errors {
+  display: inline-block;
+  color: #d65f4c;
+  font-weight: 400;
+}
+.account-page2 .field-input2 .field_with_errors {
+  position: relative;
 }
 
 .title {
   height: 30px;
-  width: 300px;
+  width: 70%;
   margin-bottom: 20px;
 }
 
 .text {
   height: 100px;
-  width: 300px;
+  width: 70%;
   resize:none;
   margin-bottom: 20px;
 }
@@ -43,18 +112,71 @@
   width: 250px;
 }
 
-.btn {
-  width: 200px;
-  margin-top: 20px;
-  padding: 15px;
-  border: 1px solid white;
-  background-color: orange;
-  color: white;
+/*これ以降はラベルの必須、任意表示のCSS*/
+.title-label:after{
+  content: "必須";
+  background-color: red;
+  color: #fff;
+  font-size: 12px;
+  font-weight: bold;
+  min-width: 10px;
+  padding: 3px 7px;
+  margin: 0px 5px;
+  line-height: 1;
+  vertical-align: middle;
+  white-space: nowrap;
+  text-align: center;
+  border-radius: 10px;
+  display: inline-block;
 }
 
-.image-delete-button {
+.text-label:after{
+  content: "必須";
+  background-color: red;
+  color: #fff;
+  font-size: 12px;
+  font-weight: bold;
+  min-width: 10px;
+  padding: 3px 7px;
+  margin: 0px 5px;
+  line-height: 1;
+  vertical-align: middle;
+  white-space: nowrap;
   text-align: center;
-  border: solid 1px;
-  cursor: pointer;
-  margin-bottom: 5px;
+  border-radius: 10px;
+  display: inline-block;
+}
+
+.category-label:after {
+  content: "必須";
+  background-color: red;
+  color: #fff;
+  font-size: 12px;
+  font-weight: bold;
+  min-width: 10px;
+  padding: 3px 7px;
+  margin: 0px 5px;
+  line-height: 1;
+  vertical-align: middle;
+  white-space: nowrap;
+  text-align: center;
+  border-radius: 10px;
+  display: inline-block;
+}
+
+.click-message:after {
+  content: "任意";
+  background-color: gray;
+  color: #fff;
+  font-size: 12px;
+  font-weight: bold;
+  min-width: 10px;
+  padding: 3px 7px;
+  margin: 0px 5px;
+  line-height: 1;
+  vertical-align: middle;
+  white-space: nowrap;
+  text-align: center;
+  border-radius: 10px;
+  display: inline-block;
 }

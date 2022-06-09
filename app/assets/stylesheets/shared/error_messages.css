@@ -1,6 +1,8 @@
 .error-alert {
   display: flex;
-  justify-content: center;
+  justify-content: left;
+  padding-left: 20px;
+  padding-bottom: 20px;
 }
 
 .error-message {
