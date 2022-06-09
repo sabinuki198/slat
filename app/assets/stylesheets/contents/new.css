@@ -20,6 +20,24 @@
   margin-bottom: 20px;
 }
 
+.images-box{
+  display: flex;
+}
+
+.preview-image{
+  margin-left: 50px;
+}
+
+.image-delete-button {
+  text-align: center;
+  border: solid 1px;
+  cursor: pointer;
+  margin: 5px 0 0 50px
+}
+
+.click-upload{
+  margin-bottom: 5px;
+}
 .category-select{
   height: 30px;
   width: 250px;

@@ -1,7 +1,7 @@
 .side-back{
-  height: calc(100vh - 12vh);/*ヘッダー抜いた高さ*/
+  height: calc(100vh - 15vh);/*ヘッダー抜いた高さ*/
   width: 20vw;
-  background-color: gray;
+  background-image: linear-gradient(to top, #09203f 0%, #537895 100%);
   padding: 10px;
 }
 
@@ -16,16 +16,16 @@
 .category-title{
   list-style: none;
   font-size: 20px;
-  color: darkslategray;
+  color: aliceblue;
 }
 .title-list{
   font-size: 20px;
   margin: 0 0 0 10px;
   text-decoration: none;
-  color: darkslategray;
+  color: aliceblue;
 }
 
 .content-title{
   text-decoration: none;
-  color: darkslategray;
+  color: aliceblue;
 }

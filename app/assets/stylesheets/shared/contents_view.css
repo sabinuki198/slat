@@ -1,5 +1,5 @@
 .contents-back{
-  height: calc(100vh - 12vh); /*ヘッダー抜いた高さ*/
+  height: calc(100vh - 15vh); /*ヘッダー抜いた高さ*/
   width: calc(100vw - 20vw);
 }
 
@@ -12,10 +12,12 @@
 
 .main-title{
   font-size: 40px;
+  padding-bottom: 10px;
 }
 
 .main-image{
   display: flex;
+  padding-bottom: 10px;
 }
 
 .content-images {
@@ -24,12 +26,6 @@
 
 .content-image {
   
-}
-
-.image-delete-button {
-  text-align: center;
-  border: solid 1px;
-  cursor: pointer;
 }
 
 .main-text{
@@ -52,4 +48,8 @@
   text-align: center;
   text-decoration: none;
   color: black;
+}
+
+a{
+  text-decoration: none;
 }

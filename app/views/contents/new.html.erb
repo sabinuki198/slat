@@ -6,13 +6,18 @@
       <%= f.text_field :title, class:"title", placeholder:"タイトル" %>
       <%= f.text_area :text, class:"text", placeholder:"テキスト" %>
       <div>
-        <div id="previews"></div>
+        <div id="previews" class="images-box"></div>
         <div class="click-upload">
           <p>クリックしてファイルをアップロード</p>
           <%= f.file_field :image, name: 'content[images][]', data: {index: 0} %>
         </div>
       </div>
-      <%= f.collection_select(:category_id, Category.all, :id, :name, {}, {class:"category-select"}) %>
-      <%= f.submit "作成する" ,class:"btn" %>
+      <div class="button-gun">
+        <div>
+        <%= f.collection_select(:category_id, Category.all, :id, :name, {}, {class:"category-select"}) %>
+        </div>
+        <%= f.submit "作成する" ,class:"btn" %>
+        </div>
+      </div>
   </div>
 <% end %>
