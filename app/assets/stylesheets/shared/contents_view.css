@@ -41,13 +41,14 @@
 .destroy-button, .edit-button{
   height: 30px;
   width: 100px;
-  background-color: aliceblue;
+  background: linear-gradient(to bottom, rgba(255,255,255,0.15) 0%, rgba(0,0,0,0.15) 100%), radial-gradient(at top center, rgba(255,255,255,0.40) 0%, rgba(0,0,0,0.40) 120%) #989898;
+  background-blend-mode: multiply,multiply;
   font-size: 20px;
   margin-right: 10px;
-  border-radius: 20px;
+  border-radius: 5px;
   text-align: center;
   text-decoration: none;
-  color: black;
+  color:aliceblue;
 }
 
 a{
