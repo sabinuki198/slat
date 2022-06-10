@@ -10,11 +10,14 @@
     <%@user_content.each do |content|%>
       <% if content.present? %>
         <div class=category-list>
-          <ul class="category-title" type="disc"><%= content.first.category.name %>
-            <% content.each do |t| %>
-              <li class="title-list">|ー <%= link_to t.title, content_path(t.id), {class: "content-title"} %></li>
-            <% end %>
-          </ul>
+          <div class="category-title" type="disc">
+            <div class="category-name">【<%= content.first.category.name %>】</div>
+            <ul class="contents-side-box">
+              <% content.each do |t| %>
+                <li class="title-list"> <%= link_to t.title, content_path(t.id), {class: "content-title"} %></li>
+              <% end %>
+            </ul>
+          </div>
         </div>
       <% end %>
     <% end %>
@@ -22,8 +25,8 @@
   <% else %>
     <div class=category-list>
       <ul class="category-title" type="disc">
-          <li class="title-list">|ーサンプルテキスト</li>
-          <li class="title-list">|ーサンプルテキスト</li>
+          <li class="title-list">サンプルテキスト</li>
+          <li class="title-list">サンプルテキスト</li>
       </ul>
     </div>
   <% end %>
