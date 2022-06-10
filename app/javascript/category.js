@@ -22,8 +22,6 @@ window.addEventListener('load', function(){
     });
     category.addEventListener('click', function(e){
       let categoryIdGet = document.getElementById(`${e.target.id}`)
-
-      console.log(categoryIdGet)
       let contentsBoxId = categoryIdGet.nextElementSibling;
       if (contentsBoxId.getAttribute("style") == "display:block;") {
         contentsBoxId.removeAttribute("style", "display:block;");

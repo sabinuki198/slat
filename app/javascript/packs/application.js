@@ -9,8 +9,8 @@ require("@rails/activestorage").start()
 require("channels")
 require('../preview') 
 require('../category')
-require('../header')
-
+require('../header_nologin')
+require('../header_login')
 
 // Uncomment to copy all static images under ../images to the output folder and reference
 // them with the image_pack_tag helper in views (e.g <%= image_pack_tag 'rails.png' %>)
