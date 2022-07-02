@@ -11,7 +11,16 @@ function show (){
     content.addEventListener('click', function(e){
       e.preventDefault(); //デフォルトでの画面遷移を中止
       const contentIdGet = document.getElementById(`${e.target.id}`);
-      console.log(contentIdGet);
+      const href = contentIdGet.getAttribute('href');
+      console.log(href);
+      console.log(location.href);
+      const XHR = new XMLHttpRequest();
+      XHR.open("GET", `${href}`, true);
+      XHR.responseType = "json";
+      XHR.send();
+      XHR.onload = () => {
+        console.log(XHR.response);
+      };
     });
   });
  };
