@@ -13,6 +13,10 @@ function show (){
       const href = contentIdGet.getAttribute('href');
       console.log(href);
       console.log(location.href);
+      const XHR = new XMLHttpRequest();
+      XHR.open("GET", `${href}`, true, admin, administrator);
+      XHR.send();
+
     });
   });
  };

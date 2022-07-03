@@ -12,7 +12,6 @@ require('../preview')
 require('../category')
 require('../header_nologin')
 require('../header_login')
-require('../content_show')
 
 
 // Uncomment to copy all static images under ../images to the output folder and reference
