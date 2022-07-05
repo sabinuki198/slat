@@ -14,7 +14,7 @@
             <div class="category-name">【<%= content.first.category.name %>】</div>
             <ul class="contents-side-box">
               <% content.each do |t| %>
-                <li class="title-list"> <%= link_to t.title, content_path(t.id), {class: "content-title"} %></li>
+                <li class="title-list"> <%= link_to t.title, content_path(t.id), class: "content-title", remote: true %></li>
               <% end %>
             </ul>
           </div>
