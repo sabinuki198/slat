@@ -1,4 +1,5 @@
 class ContentsController < ApplicationController
+  before_action :authenticate_user!, only: [:new, :show, :edit, :search]
 
   def index
     content_extract

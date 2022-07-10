@@ -1,7 +1,7 @@
 <div class="side-back">
   <div class="search-form">
     <%= form_with url: search_contents_path, method: :get, local: true do |f| %>
-      <%= f.text_field :keyword, placeholder: "記事を検索する"%>
+      <%= f.text_field :keyword, placeholder: "記事名を検索する"%>
       <%= f.submit "検索", id: "search-btn" %>
     <% end %>
   </div>
