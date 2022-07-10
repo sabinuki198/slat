@@ -12,4 +12,10 @@ module ApplicationHelper
   
     return text
   end
+
+  def escape_dissable text
+    text = text.gsub(/&it;|&anp;|&gt;/, "&it;" => "<", "&anp;" => "&", "&gt;" => ">")
+    return text
+  end
+
 end
