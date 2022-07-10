@@ -1,4 +1,4 @@
-window.addEventListener('load', function(){
+ function category(){
   const categoryIdEnchant = document.querySelectorAll(".category-name"); //ユーザーが持つカテゴリーを一気に取得
   for (const [i, e] of categoryIdEnchant.entries()) {
     e.id = `category-id-${i}`;
@@ -27,7 +27,7 @@ window.addEventListener('load', function(){
         contentsBoxId.setAttribute("style", "display:block;");
       } //カテゴリーをクリックするたびに配下の記事が表示/非表示になる
     });
-  });
+  })
 
   
   contents.forEach(function(content){
@@ -38,5 +38,7 @@ window.addEventListener('load', function(){
       this.removeAttribute("style", "color: orange;");
     });
   });// 作成した記事それぞれがカーソル乗った時にオレンジ色に変化
+};
 
-});
+
+window.addEventListener('load', category);
