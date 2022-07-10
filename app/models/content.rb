@@ -8,4 +8,12 @@ class Content < ApplicationRecord
   has_many_attached :images
   extend ActiveHash::Associations::ActiveRecordExtensions
   belongs_to :category
+
+  def self.search(search)
+    if search != ""
+      Content.where('title LIKE(?)', "%#{search}%")
+    else
+      Content.all
+    end
+  end
 end

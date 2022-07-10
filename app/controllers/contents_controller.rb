@@ -48,6 +48,16 @@ class ContentsController < ApplicationController
     end
   end
 
+  def search
+    @search = Content.search(params[:keyword])
+    @category = Category.all 
+    @contents = @search.where(user_id: current_user.id)
+    @user_content = []
+    @category.each do |num|
+      @user_content << instance_variable_set('@c'+(num.id).to_s, @contents.where(category_id: num.id))
+    end
+  end
+
   private
 
     def content_params
