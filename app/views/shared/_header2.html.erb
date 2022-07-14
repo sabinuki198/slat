@@ -1,0 +1,32 @@
+<div class="header-back">
+  <div class="header-left">
+    <%= link_to root_path, class: "logo" do%>
+    <%= image_tag 'Slat.png', class: "logo-image" %>
+    <% end %>
+  </div>
+
+  <div class="header-right">
+
+    <% if user_signed_in? %>
+      <div class="user-name">
+      ようこそ<%=current_user.nickname%>さん
+      </div>
+    <% else %>
+      <div class="user-name">
+      </div>
+    <% end %>
+
+    <% if user_signed_in? %>
+      <div class="action-button">
+        <%= link_to "記事作成", new_content_path, class: "content-create", id: "content-create-btn"%>
+        <%= link_to "ログアウト", destroy_user_session_path, method: :delete, class: "logout", id: "logout-btn"%>
+      </div>
+    <% else %>
+      <div class="action-button">
+        <%= link_to "ログイン", new_user_session_path, class: "login", id: "login-btn"%>
+        <%= link_to "新規登録", new_user_registration_path, class: "sign-up", id: "sign-up-btn"%>
+      </div>
+    <% end %>
+  </div>
+
+</div>

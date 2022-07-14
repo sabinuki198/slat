@@ -3,9 +3,19 @@
     <%= link_to root_path, class: "logo" do%>
     <%= image_tag 'Slat.png', class: "logo-image" %>
     <% end %>
+
+    <% if user_signed_in? %>
+      <div class="search-form">
+        <%= form_with url: search_contents_path, method: :get, local: true do |f| %>
+          <%= f.text_field :keyword, placeholder: "記事名を検索する"%>
+          <%= f.submit "検索", id: "search-btn" %>
+        <% end %>
+      </div>
+    <% end %>
   </div>
 
   <div class="header-right">
+
     <% if user_signed_in? %>
       <div class="user-name">
       ようこそ<%=current_user.nickname%>さん
