@@ -9,7 +9,8 @@ class Category < ActiveHash::Base
     { id: 7, name: 'PHP'},
     { id: 8, name: 'Python'},
     { id: 9, name: 'Java'},
-    { id: 10, name: 'その他'}
+    { id: 10, name: 'SQL'},
+    { id: 11, name: 'その他'}
   ]
   include ActiveHash::Associations
   has_many :contents
